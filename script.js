@@ -54,7 +54,6 @@ function game(){
         playRound(prompt("Please type your choice"));
     }
     
-
 }
 
 game();
