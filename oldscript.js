@@ -1,15 +1,8 @@
-
-
-
-let playerRockIcon = document.querySelector('#rock-player-selection');
-let playerPaperIcon = document.querySelector('#paper-player-selection');
-let playerScissorsIcon = document.querySelector('#scissors-player-selection');
-
-let computerRockIcon = document.querySelector('#rock-computer-selection');
-
 function getRandom(){
     return Math.floor(Math.random() * 3 );
 } 
+
+
 
 function getComputerChoice(){
     let symbolChoice;
@@ -22,33 +15,14 @@ function getComputerChoice(){
 }
 
 
-playerRockIcon.addEventListener('click', function () {
+function playRound(){
 
     computerSelection = getComputerChoice();
-    playRound("rock",computerSelection);
-    console.log(computerSelection);
-
-});
-
-playerPaperIcon.addEventListener('click',function(){
-    selectSelection("paper");
-    computerSelection = getComputerChoice();
-
-
-    console.log(playerSelection);
-    console.log(computerSelection);
-});
-
-playerScissorsIcon.addEventListener('click',function(){
-    selectSelection("scissors");
-    console.log(playerSelection);
-    computerSelection = getComputerChoice();
-    console.log(computerSelection);
-});
-
-function playRound(playerSelection,computerSelection){
-   
+    playerSelection = playerSelection.toLowerCase();
     let result;
+
+    console.log(playerSelection);
+    console.log(computerSelection)
 
     if (playerSelection == "rock" && computerSelection == "rock") {
         result ="Rock and Rock! It's a tie";
@@ -71,11 +45,3 @@ function playRound(playerSelection,computerSelection){
     }
     console.log(result)
 }
-
-
-
-
-
-
-
-
